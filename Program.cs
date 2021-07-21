@@ -15,15 +15,26 @@ namespace Dungeon_Redux
     {
         static void Main(string[] args)
         {
-            //Check for Update
-            Update update = new Update();
-            update.StartUpdate();
-            //var updateProcess = System.Diagnostics.Process.Start(@"..\win10-x64-Update\Update.exe");
-            //updateProcess.WaitForExit();
-            //begin game setup
             Random random;
-            //bool gameOver = false;
-            //int numEnemies = 4; //actual num +1;
+            GameState GameState = new GameState();
+            TitleScreen TS = new TitleScreen();
+            switch(TitleScreen.Display()){
+                case 1:
+                    //start a new game
+                    GameState.init();
+                    break;
+                case 2:
+                    //load a game
+                    GameState.LoadGame();
+                    break;
+                case 4:
+                    //check for updates
+                    Update update = new Update();
+                    update.StartUpdate();
+                    //var updateProcess = System.Diagnostics.Process.Start(@"..\win10-x64-Update\Update.exe");
+                    //updateProcess.WaitForExit();
+                    break;
+            }
             /*
             struct HighScore{
                 int highScore = 0;

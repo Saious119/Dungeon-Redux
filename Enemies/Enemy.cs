@@ -1,5 +1,6 @@
 using System;
 using Weapons;
+using Player;
 
 namespace Enemies
 {
@@ -17,5 +18,6 @@ namespace Enemies
         public abstract void takeDamage(int damage);
         public abstract int DropItem();
         public abstract Weapon DropWeapon();
+        public abstract Effect Effect(Player p);
     }
 }
