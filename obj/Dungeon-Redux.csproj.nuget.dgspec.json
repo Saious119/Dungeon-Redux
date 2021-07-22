@@ -1,33 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj": {}
+    "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj": {}
   },
   "projects": {
-    "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj": {
+    "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj",
+        "projectUniqueName": "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj",
         "projectName": "Dungeon-Redux",
-        "projectPath": "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj",
-        "packagesPath": "C:\\Users\\sht13\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Dungeon-Redux\\obj\\",
+        "projectPath": "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj",
+        "packagesPath": "/home/andy/.nuget/packages/",
+        "outputPath": "/mnt/c/Code/Dungeon-Redux/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sht13\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/home/andy/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,12 +47,31 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+              "version": "[5.0.8, 5.0.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.8, 5.0.8]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.osx-x64",
+              "version": "[5.0.8, 5.0.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "osx.10.11-x64": {
+          "#import": []
         }
       }
     }
