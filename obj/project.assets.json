@@ -2,26 +2,26 @@
   "version": 3,
   "targets": {
     "net5.0": {},
-    "net5.0/osx.10.11-x64": {}
+    "net5.0/linux-x64": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
     "net5.0": []
   },
   "packageFolders": {
-    "/home/andy/.nuget/packages/": {}
+    "/home/andym/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj",
+      "projectUniqueName": "/home/andym/Dungeon-Redux/Dungeon-Redux.csproj",
       "projectName": "Dungeon-Redux",
-      "projectPath": "/mnt/c/Code/Dungeon-Redux/Dungeon-Redux.csproj",
-      "packagesPath": "/home/andy/.nuget/packages/",
-      "outputPath": "/mnt/c/Code/Dungeon-Redux/obj/",
+      "projectPath": "/home/andym/Dungeon-Redux/Dungeon-Redux.csproj",
+      "packagesPath": "/home/andym/.nuget/packages/",
+      "outputPath": "/home/andym/Dungeon-Redux/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/andy/.nuget/NuGet/NuGet.Config"
+        "/home/andym/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -56,15 +56,11 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
             "version": "[5.0.8, 5.0.8]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[5.0.8, 5.0.8]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.osx-x64",
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
             "version": "[5.0.8, 5.0.8]"
           }
         ],
@@ -77,7 +73,7 @@
       }
     },
     "runtimes": {
-      "osx.10.11-x64": {
+      "linux-x64": {
         "#import": []
       }
     }
