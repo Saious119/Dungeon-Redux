@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Dungeon_Redux
 {
-    class Time
+    public class Time
     {
         public int day, hour, minute, second;
         public void initTime()

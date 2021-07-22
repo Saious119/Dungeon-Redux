@@ -15,7 +15,7 @@ namespace Dungeon_Redux
     {
         static void Main(string[] args)
         {
-            Random random;
+            //Random random;
             GameState GameState = new GameState();
             TitleScreen TS = new TitleScreen();
             switch(TitleScreen.Display()){
@@ -54,7 +54,8 @@ namespace Dungeon_Redux
                 Tutorial.run(p1);
             }
             //TODO: Make overworld Menu class and loop
-            //TODO: Make enemy generator, and make it better
+            OverWorldMenu Menu = new OverWorldMenu();
+            Menu.Menu(p1, time); //this is where the main game gameplay loop is
             Console.Clear();
             Console.WriteLine("Chad falls to the floor, having used all of his energy he turns to chrimson dust and blows away");
             Console.WriteLine("Congrats, you are now the king of Hell.");
