@@ -1,26 +1,26 @@
 using System;
 using System.IO;
-using Player;
 using System.Globalization;
 
 namespace Dungeon_Redux
 {
-    class GameState
+    public class GameState
     {
-        Player player = new Player();
-        DateTime timestamp = DateTime.Now();
+        public Player Player = new Player();
+        DateTime timestamp = DateTime.Now;
 
-        GameState init(){
-            player.NewPlayer();
-            player.APPointPlacement();
+        public GameState init(){
+            Player.NewPlayer();
+            Player.APPointPlacement();
             Time time = new Time();
-            time.init();
+            time.initTime();
+            return this;
         }
-        GameState LoadGame(){
+        public GameState LoadGame(){
             //read from JSON and return it
             return this;
         }
-        int SaveGame(GameState gamestate){
+        public int SaveGame(GameState gamestate){
             //write to JSON
             return 1;
         }

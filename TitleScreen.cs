@@ -4,10 +4,10 @@ using System.Threading;
 
 namespace Dungeon_Redux
 {
-    class TitleScreen 
+    public class TitleScreen 
     {
-        static int Display(){
-            console.WriteLine("WELCOME TO DUNGEON REDUX\n\n\n\n\n");
+        public static int Display(){
+            Console.WriteLine("WELCOME TO DUNGEON REDUX\n\n\n\n\n");
             Console.WriteLine("1. New Game");
             Console.WriteLine("2. Continue Game");
             Console.WriteLine("3. Quit");
@@ -18,13 +18,15 @@ namespace Dungeon_Redux
                 case "2":
                     return 2;
                 case "3":
-                    exit(0);
+                    Environment.Exit(0);
+                    return -1;
                 case "4":
                     return 4;
                 default:
                     Display();
                     break;
             }
+            return 0;
         }
     }
 }

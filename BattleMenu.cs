@@ -1,66 +1,70 @@
 using System;
 using System.IO;
-using Player;
-using Enemy;
+//using Player;
+using Enemies;
 
 namespace Dungeon_Redux
 {
-    class BattleMenu
+    public class BattleMenu
     {
-        public int Battle(Player p, Enemy e){ //0 alive, 1 dead, 2 error
+        public int Battle(Player p, Enemy e){ //0 alive, 1 dead, 2 enemy died, 3 error
             if(p.health < 1){
                 Console.WriteLine("Looks like you died.");
-                p1.dead = true;
+                p.dead = true;
                 return 1; 
             }
+            if(e.health < 1){
+                return 2;
+            }
             Console.WriteLine("\n {0} \t HP: {1}", e.name, e.health);
-            Console.WriteLine("\n HP: {0} \t MP: {1} \t ST: {2} \t Potions: {3} \t Level: {4}", p1.health, p1.MP, p1.stamina, p1.numHealthPotions, p1.Lvl);
+            Console.WriteLine("\n HP: {0} \t MP: {1} \t ST: {2} \t Potions: {3} \t Level: {4}", p.health, p.MP, p.stamina, p.numHealthPotions, p.Lvl);
             Console.WriteLine("1. Attack");
             Console.WriteLine("2. Cast a Spell");
             Console.WriteLine("3. Use Health Potion");
             Console.WriteLine("4. Defend");
             Console.WriteLine("5. Run");
-            switch(parseInt(Console.ReadLine())){
+            switch(Int32.Parse(Console.ReadLine())){
                 case 1: //attack with weapon
                     int weapon = WeaponSelectMenu(p);
                     e.takeDamage(p.Attack(weapon));
-                    p = e.effect(p);
+                    //p = e.effect(p);
                     p.health = p.health - e.Attack();
                     break;
                 case 2: //cast spell
-                    int spell = SpellSelectMenu(p1);
+                    int spell = SpellSelectMenu(p);
                     if(spell == -1){ //no spells to cast
                         e.takeDamage(0);
                     }
                     else{
-                        e.takeDamage(p1.UseSpell(spell));
+                        e.takeDamage(p.UseSpell(spell));
                     }
                     if(e.getHealth() < 1){
                         break;
                     }
-                    p1.health = p1.health - e.Attack();
+                    p.health = p.health - e.Attack();
                     break;
                 case 3: //Heal
-                    if(p1.numHealthPotions > 0){
-                        p1.heal();
+                    if(p.numHealthPotions > 0){
+                        p.heal();
                     }
-                    p1.health = p1.health - e.Attack();
+                    p.health = p.health - e.Attack();
                     break;
                 case 4: //Defend
-                    p1.health = p1.health - Convert.ToInt32(Math.Floor((0.5 * e.Attack())) + (0.33*p1.stats["defence"]));
+                    p.health = p.health - Convert.ToInt32(Math.Floor((0.5 * e.Attack())) + (0.33*p.stats["defence"]));
                     break;
                 case 5: //Run
                     break;
                 default:
                     break; 
             }
+            return 0;
         }
-        static int WeaponSelectMenu(Player p1){
+        static int WeaponSelectMenu(Player p){
             Console.WriteLine("--------- Choose Your Weapon ---------");
             int index = 1; //what number weapon is it
-            for(int i = 0; i < p1.WeaponList.Length; i++){
-                if(p1.WeaponList[i].name != "Empty"){
-                    Console.WriteLine("{0}. {1}", index, p1.WeaponList[i].name);
+            for(int i = 0; i < p.WeaponList.Length; i++){
+                if(p.WeaponList[i].name != "Empty"){
+                    Console.WriteLine("{0}. {1}", index, p.WeaponList[i].name);
                     index++;
                 }
             }
@@ -75,18 +79,18 @@ namespace Dungeon_Redux
             }
             int selInt = Convert.ToInt32(selStr);
             Console.WriteLine(selInt);
-            if(selInt >= p1.WeaponList.Length){
+            if(selInt >= p.WeaponList.Length){
                 Console.WriteLine("You reach for an imaginary weapon, get a hold of yourself!");
                 selInt = 1;
             }
             return selInt-1;
         }
-        static int SpellSelectMenu(Player p1){
+        static int SpellSelectMenu(Player p){
             int index = 1; //what number spell is it
             Console.WriteLine("--------- Choose Your Spell ---------");
-            for(int i = 0; i < p1.SpellBook.Length; i++){
-                if(p1.SpellBook[i].name != ""){
-                    Console.WriteLine("{0}. {1} \t {2}", index, p1.SpellBook[i].name, p1.SpellBook[i].description);
+            for(int i = 0; i < p.SpellBook.Length; i++){
+                if(p.SpellBook[i].name != ""){
+                    Console.WriteLine("{0}. {1} \t {2}", index, p.SpellBook[i].name, p.SpellBook[i].description);
                     index++;
                 }
             }
@@ -97,7 +101,7 @@ namespace Dungeon_Redux
             //Console.WriteLine("Out of loop");
             string selStr = Console.ReadLine();
             int selInt = Convert.ToInt32(selStr);
-            if(selInt >= p1.SpellBook.Length){
+            if(selInt >= p.SpellBook.Length){
                 Console.WriteLine("You reach your hand out and shout gibberish... nothing happened...");
                 selInt = 1;
             }
