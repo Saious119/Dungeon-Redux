@@ -9,29 +9,29 @@ namespace Dungeon_Redux
 {
     public class Player{
         Random random;
-        public string name;
-        public int health; //players health
-        int maxHealth; //max health
-        public bool dead; //is the player dead
-        public int attackDamage; //base attack damage
-        public int numHealthPotions; //number of health potions held
-        int healthPotionHealAmount; //how strong the health potion is
-        public int numFood; //how much food the player has
-        public int enemiesKilled; //how many enemies have been defeated 
-        public int stamina; //player stamina 
-        public int speed; //speed stat to get away (maybe dodge later)
-        public bool running; //can you run?
-        public int hungerCounter; //how hungry you are
+        public string name { get; set; }
+        public int health { get; set; } //players health
+        int maxHealth { get; set; } //max health
+        public bool dead { get; set; } //is the player dead
+        public int attackDamage { get; set; } //base attack damage
+        public int numHealthPotions { get; set; } //number of health potions held
+        int healthPotionHealAmount { get; set; } //how strong the health potion is
+        public int numFood { get; set; } //how much food the player has
+        public int enemiesKilled { get; set; } //how many enemies have been defeated 
+        public int stamina { get; set; } //player stamina 
+        public int speed { get; set; } //speed stat to get away (maybe dodge later)
+        public bool running { get; set; } //can you run?
+        public int hungerCounter { get; set; } //how hungry you are
         public Weapon[] WeaponList = new Weapon[5];
         public Spell[] SpellBook = new Spell[5];
-        public int score;
-        public int TotalHourAte; //day and hour as hours since eaten last
-        public int waitHungerWarning;
-        public int exp;
-        public int expToNextLevel;
-        public int Lvl;
-        public int AP;
-        public int MP; 
+        public int score { get; set; }
+        public int TotalHourAte { get; set; } //day and hour as hours since eaten last
+        public int waitHungerWarning { get; set; }
+        public int exp { get; set; }
+        public int expToNextLevel { get; set; }
+        public int Lvl { get; set; }
+        public int AP { get; set; }
+        public int MP { get; set; }
         public Dictionary<string, int> stats = new Dictionary<string, int>();
         public void NewPlayer(){ //init player
             health = 100;

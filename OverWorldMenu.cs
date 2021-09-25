@@ -7,7 +7,8 @@ namespace Dungeon_Redux
 {
     public class OverWorldMenu
     {
-        public void Menu(Player p1, Time time){
+        public void Menu(Player p1, Time time, GameState GS){
+            GameState GState = GS;
             while (!p1.getdead() || !time.endTime())
             {
                 p1.CalculateHungry(time.day, time.hour);
@@ -17,7 +18,8 @@ namespace Dungeon_Redux
                 Console.WriteLine("\n1. Walk deeper into the cave.");
                 Console.WriteLine("2. Eat some food.");
                 Console.WriteLine("3. Rest.");
-                Console.WriteLine("4. Quit");
+                Console.WriteLine("4. Save.");
+                Console.WriteLine("5. Quit.");
                 switch(Console.ReadLine()){
                     case "1":
                         Random random = new Random();
@@ -113,6 +115,9 @@ namespace Dungeon_Redux
                         }
                         break;
                     case "4":
+                        GState.SaveGame();
+                        break;
+                    case "5":
                         Console.WriteLine("Are you sure you want to quit? y/n");
                         if(Console.ReadLine() == "y"){
                             return;

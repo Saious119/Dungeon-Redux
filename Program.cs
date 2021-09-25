@@ -41,8 +41,7 @@ namespace Dungeon_Redux
                 String highScoreName = "None";
             }
             */
-            Time time = new Time();
-            time.initTime();
+            Time time = GameState.time;
             Thread timeThread = new Thread(new ThreadStart(time.runTime));
             timeThread.IsBackground = true;
             timeThread.Start();
@@ -55,7 +54,7 @@ namespace Dungeon_Redux
             }
             //TODO: Make overworld Menu class and loop
             OverWorldMenu Menu = new OverWorldMenu();
-            Menu.Menu(p1, time); //this is where the main game gameplay loop is
+            Menu.Menu(p1, time, GameState); //this is where the main game gameplay loop is
             Console.Clear();
             Console.WriteLine("Chad falls to the floor, having used all of his energy he turns to chrimson dust and blows away");
             Console.WriteLine("Congrats, you are now the king of Hell.");
