@@ -22,8 +22,22 @@ namespace Dungeon_Redux
         public int speed { get; set; } //speed stat to get away (maybe dodge later)
         public bool running { get; set; } //can you run?
         public int hungerCounter { get; set; } //how hungry you are
-        public Weapon[] WeaponList = new Weapon[5];
-        public Spell[] SpellBook = new Spell[5];
+        public Weapon[] WeaponList { get; set; }
+        /*
+        public Weapon[] WeaponList
+        {
+            get
+            {
+                return WeaponList;
+            }
+            set
+            {
+                Console.WriteLine(value);
+                WeaponList.AddRange(value);
+            }
+        }
+        */
+        public Spell[] SpellBook { get; set; }
         public int score { get; set; }
         public int TotalHourAte { get; set; } //day and hour as hours since eaten last
         public int waitHungerWarning { get; set; }
@@ -48,20 +62,21 @@ namespace Dungeon_Redux
             hungerCounter = 0;
             Weapon Fist = new Fists();
             Fist.Create();
-            WeaponList[0]=Fist;
+            //WeaponList[0]=Fist;
             Weapon EmptySlot = new EmptyWeaponSlot();
             EmptySlot.Create();
-            WeaponList[1]=EmptySlot;
-            WeaponList[2]=EmptySlot;
-            WeaponList[3]=EmptySlot;
-            WeaponList[4]=EmptySlot;
+            WeaponList = new Weapon[5] { Fist, EmptySlot, EmptySlot, EmptySlot, EmptySlot };
+            //WeaponList[2]=EmptySlot;
+            //WeaponList[3]=EmptySlot;
+            //WeaponList[4]=EmptySlot;
             Spell Empty = new EmptySpellSlot();
             Empty.Create();
-            SpellBook[0] = Empty;
-            SpellBook[1] = Empty;
-            SpellBook[2] = Empty;
-            SpellBook[3] = Empty;
-            SpellBook[4] = Empty;
+            SpellBook = new Spell[5] { Empty, Empty, Empty, Empty, Empty };
+            //SpellBook[0] = Empty;
+            //SpellBook[1] = Empty;
+            //SpellBook[2] = Empty;
+            //SpellBook[3] = Empty;
+            //SpellBook[4] = Empty;
             score = 0;
             TotalHourAte = 0;
             waitHungerWarning = 0;
@@ -87,6 +102,25 @@ namespace Dungeon_Redux
                 WeaponList[1] = NarpasSword;
                 stamina = 999;
                 speed = 999;
+            }
+        }
+        /*
+        public void setWeaponList(Weapon[] Weapon)
+        {
+            for(int i = 0; i < WeaponList.Length; i++){
+                WeaponList[i] = Weapon[i];
+            }
+        }
+        public Weapon[] WeaponList
+        {
+            return WeaponList;
+        }
+        */
+        public void setSpellBook(Spell[] Spell)
+        {
+            for(int i = 0; i < SpellBook.Length; i++)
+            {
+                SpellBook[i] = Spell[i];
             }
         }
         public bool getdead(){

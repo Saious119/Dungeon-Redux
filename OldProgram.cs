@@ -48,7 +48,7 @@ namespace Dungeon_Redux
             timeThread.IsBackground = true;
             timeThread.Start();
             Player p1 = new Player();
-            p1.NewPlayer();
+            p1 = GameState.Player;
             p1.APPointPlacement();
             //GAME LOOP
             Console.WriteLine("\nWelcome to the Dungeon \n Survive all 7 days to win!");

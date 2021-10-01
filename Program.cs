@@ -46,6 +46,7 @@ namespace Dungeon_Redux
             timeThread.IsBackground = true;
             timeThread.Start();
             Player p1 = GameState.Player;
+            Console.WriteLine("p1 health = {0}", p1.health);
             Console.WriteLine("\nWelcome to the Dungeon \n Survive all 7 days to win!");
             Console.WriteLine("\nWould you like the Tutorial? y/n");
             if(Console.ReadLine() == "y"){
@@ -55,7 +56,7 @@ namespace Dungeon_Redux
             //TODO: Make overworld Menu class and loop
             OverWorldMenu Menu = new OverWorldMenu();
             Menu.Menu(p1, time, GameState); //this is where the main game gameplay loop is
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Chad falls to the floor, having used all of his energy he turns to chrimson dust and blows away");
             Console.WriteLine("Congrats, you are now the king of Hell.");
             Console.WriteLine("#############################################");

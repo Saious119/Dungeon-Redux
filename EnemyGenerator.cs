@@ -10,7 +10,7 @@ namespace Dungeon_Redux
              Random random = new Random();
             //var file = Directory.GetFiles("Enemies","*.cs");
             //Console.WriteLine("Enemy File = {0}", file);
-            int index = 0;
+            int index = 1;
             if(day > 0 && day < 3){
                 if(day == 2 && hour >= 20){
                     Console.WriteLine("Bear time");

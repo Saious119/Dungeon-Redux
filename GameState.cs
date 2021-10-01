@@ -3,6 +3,7 @@ using System.IO;
 using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Text.Json;
 
 namespace Dungeon_Redux
 {
@@ -26,10 +27,13 @@ namespace Dungeon_Redux
                 Console.WriteLine("Loading Save File");
                 try
                 {
-                    var jsonInfo = File.ReadAllText(@"save.json");
-                    dynamic loadedSave = JsonConvert.DeserializeObject<GameState>(jsonInfo);
+                    string jsonInfo = File.ReadAllText(@"save.json");
+                    Player loadedSave = System.Text.Json.JsonSerializer.Deserialize<Player>(jsonInfo);
                     Console.WriteLine("Loaded save data");
-                    return loadedSave;
+                    Player = loadedSave;
+                    //Player.setWeaponList(loadedSave.WeaponList);
+                    //Player.setSpellBook(loadedSave.SpellBook);
+                    return this;
                 }
                 catch (Exception e)
                 {
@@ -49,8 +53,10 @@ namespace Dungeon_Redux
             Console.WriteLine("Writting Save File... Do Not Close Game");
             try
             {
-                var saveFile = Newtonsoft.Json.JsonConvert.SerializeObject(this);
-                File.WriteAllText(@"save.json", saveFile);
+                //var saveFile = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string jsonString = System.Text.Json.JsonSerializer.Serialize(Player, options);
+                File.WriteAllText(@"save.json", jsonString);
             }
             catch(Exception e)
             {
