@@ -69,7 +69,7 @@ namespace Enemies
                 return wg;
             }
             else{
-                Weapon wg = new EmptyWeaponSlot();
+                Weapon wg = new DwellerSword();
                 wg.Create();
                 return wg;
             }

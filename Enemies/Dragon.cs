@@ -63,12 +63,12 @@ namespace Enemies
         public override Weapon DropWeapon(){
             random = new Random();
             if(random.Next(0, 100) <= dropRate){
-                Weapon wg = new EmptyWeaponSlot();
+                Weapon wg = new DwellerSword();
                 wg.Create();
                 return wg;
             }
             else{
-                Weapon wg = new EmptyWeaponSlot();
+                Weapon wg = new WarHammer();
                 wg.Create();
                 return wg;
             }

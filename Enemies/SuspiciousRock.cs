@@ -46,7 +46,7 @@ namespace Enemies
                     return 1; //food
                 }
                 else {
-                    return 1; //health Potion
+                    return 2; //health Potion
                 }
             }
             else{
@@ -54,17 +54,10 @@ namespace Enemies
             }
         }
         public override Weapon DropWeapon(){
-            random = new Random();
-            if(random.Next(0,dropRate) <= dropRate){
-                Weapon wg = new EmptyWeaponSlot();
-                wg.Create();
-                return wg;
-            }
-            else{
-                Weapon wg = new EmptyWeaponSlot();
-                wg.Create();
-                return wg;
-            }
+            Weapon wg = new EmptyWeaponSlot();
+            wg.Create();
+            return wg;
+            
         }
     }   
 }

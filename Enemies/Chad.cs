@@ -74,17 +74,9 @@ namespace Enemies
             }
         }
         public override Weapon DropWeapon(){
-            random = new Random();
-            if(random.Next(0,100) <= dropRate){
-                Weapon wg = new EmptyWeaponSlot();
-                wg.Create();
-                return wg;
-            }
-            else{
-                Weapon wg = new EmptyWeaponSlot();
-                wg.Create();
-                return wg;
-            }
+            Weapon wg = new EmptyWeaponSlot();
+            wg.Create();
+            return wg;
         }
     }
 }

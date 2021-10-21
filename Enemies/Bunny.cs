@@ -35,7 +35,7 @@ namespace Enemies
                     return 1; //food
                 }
                 else {
-                    return 1; //health Potion
+                    return 2; //health Potion
                 }
             }
             else{
