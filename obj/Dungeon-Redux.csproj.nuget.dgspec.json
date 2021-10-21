@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj": {}
+    "C:\\code\\Dungeon-Redux\\Dungeon-Redux.csproj": {}
   },
   "projects": {
-    "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj": {
+    "C:\\code\\Dungeon-Redux\\Dungeon-Redux.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj",
+        "projectUniqueName": "C:\\code\\Dungeon-Redux\\Dungeon-Redux.csproj",
         "projectName": "Dungeon-Redux",
-        "projectPath": "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj",
+        "projectPath": "C:\\code\\Dungeon-Redux\\Dungeon-Redux.csproj",
         "packagesPath": "C:\\Users\\sht13\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\Dungeon-Redux\\obj\\",
+        "outputPath": "C:\\code\\Dungeon-Redux\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

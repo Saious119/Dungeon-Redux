@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <SonarConfigDir>C:\Code\Dungeon-Redux\.sonarqube\conf</SonarConfigDir>
-  <SonarOutputDir>C:\Code\Dungeon-Redux\.sonarqube\out</SonarOutputDir>
-  <SonarBinDir>C:\Code\Dungeon-Redux\.sonarqube\bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>C:\Code\Dungeon-Redux</SonarScannerWorkingDirectory>
+  <SonarConfigDir>C:\code\Dungeon-Redux\.sonarqube\conf</SonarConfigDir>
+  <SonarOutputDir>C:\code\Dungeon-Redux\.sonarqube\out</SonarOutputDir>
+  <SonarBinDir>C:\code\Dungeon-Redux\.sonarqube\bin</SonarBinDir>
+  <SonarScannerWorkingDirectory>C:\code\Dungeon-Redux</SonarScannerWorkingDirectory>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
-  <SonarQubeVersion>9.0.1.46107</SonarQubeVersion>
+  <SonarQubeVersion>9.1.0.47736</SonarQubeVersion>
   <SonarProjectKey>Dungeon-Redux</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
     <ConfigSetting Id="VsCoverageConverterToolPath" />
-    <ConfigSetting Id="settings.file.path" Value="C:\Users\sht13\.dotnet\tools\.store\dotnet-sonarscanner\5.2.2\dotnet-sonarscanner\5.2.2\tools\net5.0\any\SonarQube.Analysis.xml" />
+    <ConfigSetting Id="settings.file.path" Value="C:\Users\sht13\.dotnet\tools\.store\dotnet-sonarscanner\5.3.1\dotnet-sonarscanner\5.3.1\tools\net5.0\any\SonarQube.Analysis.xml" />
   </AdditionalConfig>
   <ServerSettings>
-    <Property Name="sonaranalyzer-cs.nuget.packageVersion">8.25.0.33663</Property>
+    <Property Name="sonaranalyzer-cs.nuget.packageVersion">8.29.0.36737</Property>
     <Property Name="sonar.cs.ignoreHeaderComments">true</Property>
     <Property Name="sonar.typescript.file.suffixes">.ts,.tsx</Property>
     <Property Name="email.fromName">SonarQube</Property>
@@ -51,7 +51,7 @@
     <Property Name="sonar.python.file.suffixes">py</Property>
     <Property Name="sonar.cs.file.suffixes">.cs</Property>
     <Property Name="sonar.allowPermissionManagementForProjectAdmins">true</Property>
-    <Property Name="sonaranalyzer-vbnet.staticResourceName">SonarAnalyzer-8.25.0.33663.zip</Property>
+    <Property Name="sonaranalyzer-vbnet.staticResourceName">SonarAnalyzer-8.29.0.36737.zip</Property>
     <Property Name="sonar.java.file.suffixes">.java,.jav</Property>
     <Property Name="sonar.kotlin.file.suffixes">.kt</Property>
     <Property Name="sonar.php.file.suffixes">php,php3,php4,php5,phtml,inc</Property>
@@ -59,7 +59,7 @@
     <Property Name="sonar.dbcleaner.weeksBeforeDeletingAllSnapshots">260</Property>
     <Property Name="sonar.auth.github.enabled">false</Property>
     <Property Name="sonar.python.coverage.reportPaths">coverage-reports/*coverage-*.xml</Property>
-    <Property Name="sonaranalyzer-vbnet.nuget.packageVersion">8.25.0.33663</Property>
+    <Property Name="sonaranalyzer-vbnet.nuget.packageVersion">8.29.0.36737</Property>
     <Property Name="sonar.go.file.suffixes">.go</Property>
     <Property Name="sonar.auth.saml.applicationId">sonarqube</Property>
     <Property Name="sonar.dbcleaner.weeksBeforeKeepingOnlyAnalysesWithVersion">104</Property>
@@ -72,12 +72,12 @@
     <Property Name="sonar.ruby.file.suffixes">.rb</Property>
     <Property Name="sonar.auth.github.allowUsersToSignUp">true</Property>
     <Property Name="sonar.python.xunit.reportPath">xunit-reports/xunit-result-*.xml</Property>
-    <Property Name="sonar.javascript.globals">angular,goog,google,OenLayers,d3,dojo,dojox,dijit,Backbone,moment,casper</Property>
+    <Property Name="sonar.javascript.globals">angular,goog,google,OenLayers,d3,dojo,dojox,dijit,Backbone,moment,casper,_</Property>
     <Property Name="sonar.dbcleaner.hoursBeforeKeepingOnlyOneSnapshotByDay">24</Property>
     <Property Name="sonar.auth.github.webUrl">https://github.com/</Property>
     <Property Name="sonaranalyzer-vbnet.nuget.packageId">SonarAnalyzer.VisualBasic</Property>
     <Property Name="email.from">noreply@nowhere</Property>
-    <Property Name="sonaranalyzer-vbnet.pluginVersion">8.25.0.33663</Property>
+    <Property Name="sonaranalyzer-vbnet.pluginVersion">8.29.0.36737</Property>
     <Property Name="sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek">4</Property>
     <Property Name="sonaranalyzer-vbnet.analyzerId">SonarAnalyzer.VisualBasic</Property>
     <Property Name="email.prefix">[SONARQUBE]</Property>
@@ -85,14 +85,14 @@
     <Property Name="sonaranalyzer-cs.pluginKey">csharp</Property>
     <Property Name="sonar.auth.saml.providerName">SAML</Property>
     <Property Name="sonar.ruby.coverage.reportPaths">coverage/.resultset.json</Property>
-    <Property Name="sonaranalyzer-cs.staticResourceName">SonarAnalyzer-8.25.0.33663.zip</Property>
+    <Property Name="sonaranalyzer-cs.staticResourceName">SonarAnalyzer-8.29.0.36737.zip</Property>
     <Property Name="sonar.auth.gitlab.allowUsersToSignUp">true</Property>
     <Property Name="sonaranalyzer-cs.nuget.packageId">SonarAnalyzer.CSharp</Property>
     <Property Name="sonar.authenticator.downcase">false</Property>
     <Property Name="sonaranalyzer-cs.analyzerId">SonarAnalyzer.CSharp</Property>
     <Property Name="sonar.technicalDebt.ratingGrid">0.05,0.1,0.2,0.5</Property>
     <Property Name="sonar.lf.enableGravatar">false</Property>
-    <Property Name="sonaranalyzer-cs.pluginVersion">8.25.0.33663</Property>
+    <Property Name="sonaranalyzer-cs.pluginVersion">8.29.0.36737</Property>
     <Property Name="sonar.developerAggregatedInfo.disabled">false</Property>
     <Property Name="sonar.javascript.file.suffixes">.js,.jsx,.mjs,.vue</Property>
     <Property Name="sonar.vbnet.analyzeGeneratedCode">false</Property>
@@ -100,8 +100,8 @@
     <Property Name="sonar.auth.gitlab.url">https://gitlab.com</Property>
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.updatecenter.url">https://update.sonarsource.org/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">8/11/2021 3:16:53 PM</Property>
-    <Property Name="sonar.core.id">BF41A1F2-AXs2pWVRD-KAAOBttSUY</Property>
+    <Property Name="sonar.core.startTime">10/20/2021 8:00:06 PM</Property>
+    <Property Name="sonar.core.id">BF41A1F2-AXygJdaVrcxEueYSIAed</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
@@ -109,54 +109,58 @@
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-      <RulesetPath>C:\Code\Dungeon-Redux\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\Code\Dungeon-Redux\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>C:\code\Dungeon-Redux\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>C:\code\Dungeon-Redux\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="8.25.0.33663" StaticResourceName="SonarAnalyzer-8.25.0.33663.zip">
+        <AnalyzerPlugin Key="csharp" Version="8.29.0.36737" StaticResourceName="SonarAnalyzer-8.29.0.36737.zip">
           <AssemblyPaths>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\Newtonsoft.Json.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CFG.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
-        <AnalyzerPlugin Key="vbnet" Version="8.25.0.33663" StaticResourceName="SonarAnalyzer-8.25.0.33663.zip">
+        <AnalyzerPlugin Key="vbnet" Version="8.29.0.36737" StaticResourceName="SonarAnalyzer-8.29.0.36737.zip">
           <AssemblyPaths>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>C:\Code\Dungeon-Redux\.sonarqube\conf\cs\SonarLint.xml</Path>
+        <Path>C:\code\Dungeon-Redux\.sonarqube\conf\cs\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-      <RulesetPath>C:\Code\Dungeon-Redux\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>C:\Code\Dungeon-Redux\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>C:\code\Dungeon-Redux\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>C:\code\Dungeon-Redux\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="8.25.0.33663" StaticResourceName="SonarAnalyzer-8.25.0.33663.zip">
+        <AnalyzerPlugin Key="csharp" Version="8.29.0.36737" StaticResourceName="SonarAnalyzer-8.29.0.36737.zip">
           <AssemblyPaths>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\Newtonsoft.Json.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CFG.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
+            <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\0\THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
-        <AnalyzerPlugin Key="vbnet" Version="8.25.0.33663" StaticResourceName="SonarAnalyzer-8.25.0.33663.zip">
+        <AnalyzerPlugin Key="vbnet" Version="8.29.0.36737" StaticResourceName="SonarAnalyzer-8.29.0.36737.zip">
           <AssemblyPaths>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\Google.Protobuf.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.dll</Path>
             <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>C:\Users\sht13\AppData\Local\Temp\.sonarqube\resources\1\THIRD-PARTY-NOTICES.txt</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>C:\Code\Dungeon-Redux\.sonarqube\conf\vbnet\SonarLint.xml</Path>
+        <Path>C:\code\Dungeon-Redux\.sonarqube\conf\vbnet\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

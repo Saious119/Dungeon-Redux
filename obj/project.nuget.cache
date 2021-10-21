@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s/dPQe8/jyHLQ3fS2c2pZpenPDu8W63fyy2Hqaytb4yN+R4d0h5Q9M+Q0HWUxF26oDxOd5NqR0hY/L3Y+KzHcw==",
+  "dgSpecHash": "FiTpQleY9zfXB/NYonDJBC6OlJZHQqc5YpU8H1cNYuIpTDwr5t/NYyu34a3wyOCxaW6IN2U/mGrnuf+xNxUIsg==",
   "success": true,
-  "projectFilePath": "C:\\Code\\Dungeon-Redux\\Dungeon-Redux.csproj",
+  "projectFilePath": "C:\\code\\Dungeon-Redux\\Dungeon-Redux.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sht13\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
