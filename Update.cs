@@ -15,15 +15,15 @@ namespace Dungeon_Redux{
             int updateFlag = 0;
             string Lversion = "0.1.14"; //local version
             string Sversion; //Server Version
-            string remoteURI = "http://www.fortrash.com/Dungeon-Redux/";
+            string remoteURI = "https://www.fortrash.com/Dungeon-Redux/";
             string pwd = Directory.GetCurrentDirectory();
             string fileName = "";
             string tempDir = "";
-            GetUpdateInfo(ref updateFlag, ref Lversion);
+            //GetUpdateInfo(ref updateFlag, ref Lversion);
             Console.WriteLine("Local Version = {0}", Lversion);
             //Get Remote Version
             WebClient client = new WebClient();
-            Stream stream = client.OpenRead("http://www.fortrash.com/Dungeon-Redux/Version.txt");
+            Stream stream = client.OpenRead("https://www.fortrash.com/Dungeon-Redux/Version.txt");
             StreamReader reader = new StreamReader(stream);
             Sversion = reader.ReadToEnd();
             Console.WriteLine("Server Version = {0}", Sversion);
@@ -43,6 +43,7 @@ namespace Dungeon_Redux{
                     break;
                 }
             }
+            client.Dispose();
         }
         public void checkPlatform(ref string fileName, ref string tempDir){ //checks platform and selects proper file and folder structure syntax
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
@@ -77,9 +78,7 @@ namespace Dungeon_Redux{
             //ZipFile.ExtractToDirectory(fileName, currentAssembly+tempDir, true);
             Console.WriteLine("Press any key to close program, unzip and relaunch from new folder and delete the old one.");
             Console.ReadLine(); //wait for input before closing
-        }
-        public void GetUpdateInfo(ref int updateFlag, ref string Lversion){
-            
+            myWebClient.Dispose();
         }
     }
 }
