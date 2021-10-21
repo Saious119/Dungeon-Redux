@@ -8,6 +8,7 @@
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>9.1.0.47736</SonarQubeVersion>
   <SonarProjectKey>Dungeon-Redux</SonarProjectKey>
+  <SonarProjectVersion>1.0.3</SonarProjectVersion>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
