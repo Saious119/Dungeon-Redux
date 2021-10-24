@@ -28,7 +28,10 @@ namespace Dungeon_Redux
                     int weapon = WeaponSelectMenu(p);
                     e.takeDamage(p.Attack(weapon));
                     //p = e.effect(p);
-                    p.health = p.health - e.Attack();
+                    if (e.health > 0)
+                    {
+                        p.health = p.health - e.Attack();
+                    }
                     break;
                 case 2: //cast spell
                     int spell = SpellSelectMenu(p);
@@ -53,6 +56,27 @@ namespace Dungeon_Redux
                     p.health = p.health - Convert.ToInt32(Math.Floor((0.5 * e.Attack())) + (0.33*p.stats["defence"]));
                     break;
                 case 5: //Run
+                    Console.WriteLine("You look around youu for a way out of this fight");
+                    if (p.GetSpeed() > e.speed)
+                    {
+                        if (p.stamina > 0)
+                        {
+                            Console.WriteLine("there's an opening and you run for it!");
+                            Console.WriteLine("You made it away!");
+                            p.stamina--;
+                            p.score--;
+                            return 2;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You're too tired to run");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You try to run but the {0} is too fast for you!", e.name);
+                    }
+                    p.health = p.health - e.Attack();
                     break;
                 default:
                     break; 

@@ -7,7 +7,7 @@ namespace Dungeon_Redux
 {
     public class OverWorldMenu
     {
-        public void Menu(Player p1, Time time, GameState GS){
+        public int Menu(Player p1, Time time, GameState GS){ //1 is loss //0 is won
             GameState GState = GS;
             while (!p1.getdead() || !time.endTime())
             {
@@ -26,10 +26,10 @@ namespace Dungeon_Redux
                         EnemyGenerator EGen = new EnemyGenerator();
                         Enemy e = EGen.Generate(time.day, time.hour);
                         if(e.name.Contains("Chad")){
-                            FinalBoss(p1, e);
+                            int finalFightResult = FinalBoss(p1, e);
                             p1.score+=2;
                             Console.WriteLine("Score = {0}", p1.score);
-                            return;
+                            return finalFightResult;
                         }
                         Console.WriteLine("You decide to keep walking further into the depths.");
                         Console.WriteLine("All of the sudden you get ambushed by a {0}", e.name);
@@ -120,7 +120,7 @@ namespace Dungeon_Redux
                     case "5":
                         Console.WriteLine("Are you sure you want to quit? y/n");
                         if(Console.ReadLine() == "y"){
-                            return;
+                            return 1;
                         }
                         else{
                             break;
@@ -131,20 +131,22 @@ namespace Dungeon_Redux
 
                 }
             }
+            return 1;
             Console.WriteLine("Score: {0}", p1.score);
         }
-        static public void FinalBoss(Player p1, Enemy e){
+        static public int FinalBoss(Player p1, Enemy e){ //1 is loss 0 is won
             BattleMenu BattleMenu = new BattleMenu();
             BattleMenu.Battle(p1, e);
             if(p1.health < 1){
-                return;
+                return 1;
             }
             TutorialBunny2 tb2 = new TutorialBunny2();
             tb2.Create();
             BattleMenu.Battle(p1, tb2);
             if(p1.health < 1){
-                return;
+                return 1;
             }
+            return 0;
         }
     }
 }

@@ -55,17 +55,20 @@ namespace Dungeon_Redux
             }
             //TODO: Make overworld Menu class and loop
             OverWorldMenu Menu = new OverWorldMenu();
-            Menu.Menu(p1, time, GameState); //this is where the main game gameplay loop is
-            //Console.Clear();
-            Console.WriteLine("Chad falls to the floor, having used all of his energy he turns to chrimson dust and blows away");
-            Console.WriteLine("Congrats, you are now the king of Hell.");
+            int GameResult = Menu.Menu(p1, time, GameState); //this is where the main game gameplay loop is
+            if (GameResult == 0)
+            {
+                //Console.Clear();
+                Console.WriteLine("Chad falls to the floor, having used all of his energy he turns to chrimson dust and blows away");
+                Console.WriteLine("Congrats, you are now the king of Hell.");
+            }
             Console.WriteLine("#############################################");
             Console.WriteLine("#             Thanks For Playing            #");
             Console.WriteLine("#        Find this project on GitHub        #");
             Console.WriteLine("# https://github.com/BoneKing/Dungeon-Redux #");
             Console.WriteLine("#     This game was made by Andy Mahoney    #");
             Console.WriteLine("#            Last Updated 10/20/2020        #");
-            Console.WriteLine("#############################################");
+            Console.WriteLine("#############################################");   
         }
     }
 }
